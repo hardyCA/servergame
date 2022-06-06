@@ -8,7 +8,7 @@ const cors = require('cors')
 app.use(cors())
 const server = http.createServer(app)
 
-const PORT = parseInt(process.env.PORT) || 3001;
+const PORT = parseInt(process.env.PORT)
 const io = new Server(server, {
     cors: {
         origin: 'http://localhost:8080',
