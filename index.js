@@ -8,6 +8,7 @@ const cors = require('cors')
 app.use(cors())
 const server = http.createServer(app)
 
+const PORT = parseInt(process.env.PORT) || 3001;
 const io = new Server(server, {
     cors: {
         origin: 'http://localhost:8080',
@@ -181,8 +182,8 @@ io.on('connection', (socket) => {
 
 
 
-server.listen(3000, () => {
-    console.log('Server is running on port 3000')
+server.listen(PORT, () => {
+    console.log('puerto servidor ', PORT)
 })
 
 
